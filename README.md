@@ -1,5 +1,7 @@
 # README
 
+本项目实现了基于声波的通讯系统，可以在两台设备之间传递任意长度 ASCII 字符串。
+
 ## 程序结构
 
 -   `sender.py`：发送端代码，输入待发送的 ASCII 字符，输出名为`output.wav`的文件。
@@ -12,8 +14,3 @@
 -   在接收端设备上运行`receiver.py`代码进行监听；
 -   在发送端设备上播放`output.wav`；
 -   监听结束，弹出解码结果。
-
-## 注意事项
-
--   程序使用 Python3 运行，运行前需要安装 wave 处理、数据分析等包，如果运行中发现包找不到可以调用`pip install package-name`进行安装。
--   程序中有可调参数，包括每个符号位时间 T，频率 f，采样率 framerate，录音时间 recording_time，可根据需求进行调整。相关性检测中也有相关参数，可以调整相关性峰间距，峰阈值等，详见`scipy.signal.find_peaks`的参数说明。
